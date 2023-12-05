@@ -1,12 +1,28 @@
 /* GLOBALES */
 body{
-    background-color: blue;
+    background-color: red;
     font-size: 30px;
     color: white;
     /* background-color: #000; */
+    position: absolute;
+    
 }
+
+.logo{
+    width: 50%;
+    position: relative;
+    margin: 0px 0 0 262px;
+}
+/* INDEX */
+
+
 
 /* PORTAFOLIO */
 .tituloPortafolio{
-    font-size: 50px;
+    font-size: 10px;
+}
+
+#Titulo2{
+    background-color: blue;
+    width: 50%;
 }
