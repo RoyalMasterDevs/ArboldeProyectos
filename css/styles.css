@@ -1,28 +1,69 @@
 /* GLOBALES */
-body{
-    background-color: red;
-    font-size: 30px;
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    /* background: rgb(2,0,36); */
+    background-color: #553CEE;
+    /* background: linear-gradient(90deg, rgba(2,0,36,.1) 0%, rgba(9,9,121,1) 30%, rgba(0,212,255,1) 100%);  */
+}
+
+/* BARRAS DE NAVEGACION */
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav img {
+    width: 10%;
+}
+
+/* PROPIEDAD FLEX  */
+/*
+nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+ 
+nav ul li {
+    padding: 10px;
+    padding-left: 10px;
+    list-style-type: none;
+}
+
+li,
+a {
     color: white;
-    /* background-color: #000; */
-    position: absolute;
-    
+    text-decoration: none;
+} */
+
+/* TERMINA FLEX  */
+
+/* PROPIEDAD GRID */
+
+nav ul {
+
+    display: grid;
+    grid-template-areas: "A B"
+                         "C D";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 200px;
+
 }
-
-.logo{
-    width: 50%;
-    position: relative;
-    margin: 0px 0 0 262px;
+.itemA{
+    grid-area: A;
 }
-/* INDEX */
+.itemB{
+    grid-area: B;
 
-
-
-/* PORTAFOLIO */
-.tituloPortafolio{
-    font-size: 10px;
 }
-
-#Titulo2{
-    background-color: blue;
-    width: 50%;
+.itemC{
+grid-area: C;
+}
+.itemD{
+    grid-area: D;
 }
