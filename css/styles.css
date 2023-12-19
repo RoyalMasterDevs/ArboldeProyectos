@@ -1,28 +1,92 @@
+/* RESETEA LAS CARACTERISTICAS DE LOS ELEMENTOS EN LOS DIFERENTES EXPLORADORES WEB */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
 /* GLOBALES */
-body{
-    background-color: red;
-    font-size: 30px;
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+#wrapper {
+    margin-left: 2.5%;
+    width: 95%;
+    border-radius: 5%;
+    background-color: blue;
+}
+
+.nav {
+    width: 100%;
+    display: flex;
+    /* flex-direction: row; FLEX APLICA ESTA PROPIEDAD POR DEFAULT */
+    justify-content: space-between;
+}
+
+.nav__img img {
+    width: 30%;
+}
+
+.nav__enlaces {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
     color: white;
-    /* background-color: #000; */
-    position: absolute;
-    
 }
 
-.logo{
-    width: 50%;
-    position: relative;
-    margin: 0px 0 0 262px;
+.nav__li,
+a {
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+    padding: 20px;
 }
-/* INDEX */
-
-
 
 /* PORTAFOLIO */
-.tituloPortafolio{
-    font-size: 10px;
+.tarjetas {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    max-width: 100%;
+    height: 300px;
+    scroll-padding: 25px;
+    column-gap: 10px;
+    margin-top: 20px;
+    background-size: cover;
 }
 
-#Titulo2{
-    background-color: blue;
-    width: 50%;
+.tarjetas__elemento {
+    display: block;
+    padding: 50px;
+    scroll-snap-align: start;
+    border-radius: 50px;
+    width: 200px;
+    height: 196px;
+    background-color: white;
+
+}
+
+.tarjetas:nth-child(1) {
+    background-image: url(../img/1.jpg);
+}
+
+.tarjetas:nth-child(2) {
+    background-image: url(../img/2.jpg);
+}
+
+.tarjetas:nth-child(3) {
+    background-image: url(../img/3.jpg);
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 468px) {
+    .nav {
+        flex-direction: column;
+        align-items: center;
+    }
 }
